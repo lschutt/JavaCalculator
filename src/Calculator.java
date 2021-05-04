@@ -225,6 +225,19 @@ public class Calculator {
 		btnMult.setBounds(232, 121, 53, 44);
 		frame.getContentPane().add(btnMult);
 		
+		JButton btnPerc = new JButton("%");
+		btn2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				firstNum = Double.parseDouble(calcField.getText());
+				calcField.setText("");
+				operator = "%";
+			}
+		});
+		btnPerc.setBackground(Color.LIGHT_GRAY);
+		btnPerc.setFont(new Font("Yu Gothic UI Semibold", Font.PLAIN, 18));
+		btnPerc.setBounds(84, 255, 64, 64);
+		frame.getContentPane().add(btnPerc);		
+		
 		JButton btnMin = new JButton("-");
 		btnMin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
